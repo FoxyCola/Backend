@@ -5,7 +5,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors({
-    origin: "https://frontend2025tienda.vercel.app/", // Permite solo el frontend local
+    origin: "https://frontend2025tienda.vercel.app", // Permite solo el frontend local
     credentials: true, // Permite enviar cookies o tokens en headers
     allowedHeaders: ["Content-Type", "Authorization"] // Asegurar que se permita el token
 }));
