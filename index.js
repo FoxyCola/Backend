@@ -4,12 +4,12 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
-app.use(express.json());
 app.use(cors({
     origin: "https://frontend2025tienda.vercel.app/", // Permite solo el frontend local
     credentials: true, // Permite enviar cookies o tokens en headers
     allowedHeaders: ["Content-Type", "Authorization"] // Asegurar que se permita el token
 }));
+app.use(express.json());
 
 // Conectar a MongoDB Atlas
 mongoose.connect(process.env.MONGO_URI, {
