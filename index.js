@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: "http://localhost:3000", // Permite solo el frontend local
+    origin: "https://frontend2025tienda.vercel.app/", // Permite solo el frontend local
     credentials: true, // Permite enviar cookies o tokens en headers
     allowedHeaders: ["Content-Type", "Authorization"] // Asegurar que se permita el token
 }));
@@ -47,5 +47,5 @@ app.use("/api/inventory", inventoryRoutes);
 app.use("/api/purchase", purchaseRoutes);
 
 app.listen(PORT, () => {
-console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
+console.log(`🚀 Servidor corriendo en vercel!`);
 });
